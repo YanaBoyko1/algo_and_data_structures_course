@@ -1,4 +1,4 @@
-from remm import min_eating_speed
+from laba2 import min_eating_speed
 from unittest import TestCase, main
 
 class TestMinEatingSpeed(TestCase):
