@@ -16,14 +16,18 @@ def gas_supply(list_city, list_storage, list_active_gas_pipelines):
             if neighbor not in visited:
                 dfs(graph, neighbor, visited)
 
-    graph = create_adjacency_list(list_active_gas_pipelines)
-    visited = set()
+    unreachable = {}
     for storage in list_storage:
-        if storage not in visited:
-            dfs(graph, storage, visited)
+        visited = set()
+        dfs(graph, storage, visited)
 
-    unreachable = set(list_city)
-    for city in list_city:
-        if city in visited:
-            unreachable.remove(city)
+        # unreachable_cities = set(list_city)
+        unreachable_cities = []
+        for city in list_city:
+            if city not in visited:
+                unreachable_cities.append(city)
+
+        if unreachable_cities:
+            unreachable[storage] = unreachable_cities
+
     return unreachable
