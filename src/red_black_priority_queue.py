@@ -119,7 +119,7 @@ class RedBlackPriorityQueue:
     def delete(self, k, priority):
         z = self.search(k, priority)
 
-        if z == self.nil:
+        if z is None:
             return "Key not found!"
 
         y = z
