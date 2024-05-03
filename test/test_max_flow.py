@@ -1,10 +1,11 @@
 from unittest import TestCase, main
-from max_flow import calculate_max_flow, ford_fulkerson
+from src.max_flow import calculate_max_flow, ford_fulkerson
+
 
 class TestMaxFlow(TestCase):
     def test_calculate_max_flow(self):
         expected_max_flow = 51
-        actual_max_flow = calculate_max_flow('roads.csv')
+        actual_max_flow = calculate_max_flow('../src/roads.csv')
         self.assertEqual(actual_max_flow, expected_max_flow)
 
     def test_ford_fulkerson(self):
@@ -24,6 +25,7 @@ class TestMaxFlow(TestCase):
 
         max_flow = ford_fulkerson(graph, 'F1', 'S1')
         self.assertEqual(max_flow, 10)
+
 
 if __name__ == '__main__':
     main()
