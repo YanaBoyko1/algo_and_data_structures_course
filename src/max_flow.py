@@ -6,10 +6,8 @@ infinity = float("inf")
 
 def bfs(graph, source, sink, parent):
     visited = set()
-
     queue = deque()
     queue.append(source)
-
     visited.add(source)
 
     while queue:
@@ -38,7 +36,6 @@ def ford_fulkerson(graph, source, sink):
 
         max_flow += path_flow
         node = sink
-
         while node != source:
             parent_node = parent[node]
             graph[parent_node][node] -= path_flow
@@ -49,8 +46,8 @@ def ford_fulkerson(graph, source, sink):
 
 def read_graph_from_file(filename):
     graph = defaultdict(dict)
-    with open(filename, newline="") as csvfile:
-        reader = csv.reader(csvfile)
+    with open(filename, newline="") as csv_file:
+        reader = csv.reader(csv_file)
         farms = next(reader)
         shops = next(reader)
         for row in reader:
