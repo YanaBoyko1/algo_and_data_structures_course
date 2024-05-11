@@ -1,5 +1,5 @@
 from unittest import TestCase, main
-from prefix_trie import Trie
+from src.prefix_trie import Trie
 
 
 class TestTrie(TestCase):

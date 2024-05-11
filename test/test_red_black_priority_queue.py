@@ -1,5 +1,5 @@
 from unittest import TestCase, main
-from red_black_priority_queue import RedBlackPriorityQueue
+from src.red_black_priority_queue import RedBlackPriorityQueue
 
 red = "red"
 black = "black"

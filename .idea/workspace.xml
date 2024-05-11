@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfb767d4-4bd5-4f65-9e28-9c5c5affeadf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/algo_and_data_structures_course.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/max_flow.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/roads.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_max_flow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scr/find_k_larges.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/find_k_larges.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scr/max_binary_tree_diameter.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/max_binary_tree_diameter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scr/min_eating_speed.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/min_eating_speed.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scr/number_of_islands" beforeDir="false" afterPath="$PROJECT_DIR$/src/number_of_islands" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scr/prefix_trie.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/prefix_trie.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scr/red_black_priority_queue.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/red_black_priority_queue.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scr/supply_gas_for_penguins.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/supply_gas_for_penguins.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_min_eating_speed.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_min_eating_speed.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,14 +36,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging main",
-    "last_opened_file_path": "C:/Users/ivann/PycharmProjects/algo_and_data_structures_course"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ivann/PycharmProjects/algo_and_data_structures_course&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="test_find_k_largest" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="algo_and_data_structures_course" />

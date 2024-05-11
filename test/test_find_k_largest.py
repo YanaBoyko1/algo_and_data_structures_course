@@ -1,4 +1,4 @@
-from laba1 import find_k_largest, sorted_numbers
+from src.find_k_larges import find_k_largest, sorted_numbers
 from unittest import TestCase, main
 
 class TestSortedNumbers(TestCase):

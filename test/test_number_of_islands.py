@@ -1,5 +1,5 @@
 from unittest import TestCase, main
-from number_of_islands import num_islands
+from src.number_of_islands import num_islands
 
 
 class TestNumIslands(TestCase):

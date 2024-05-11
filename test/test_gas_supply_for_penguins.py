@@ -1,5 +1,5 @@
 from unittest import TestCase, main
-from supply_gas_for_penguins import gas_supply
+from src.supply_gas_for_penguins import gas_supply
 
 
 class TestGasSupply(TestCase):

@@ -1,4 +1,4 @@
-from src.laba2 import min_eating_speed
+from src.min_eating_speed import min_eating_speed
 from unittest import TestCase, main
 
 class TestMinEatingSpeed(TestCase):
