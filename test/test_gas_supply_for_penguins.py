@@ -1,34 +1,66 @@
-from unittest import TestCase, main
+import unittest
 from src.supply_gas_for_penguins import gas_supply
 
 
-class TestGasSupply(TestCase):
+class TestGasSupply(unittest.TestCase):
     def test_gas_supply(self):
-        list_city = ['Lviv', 'Kyiv', 'Odessa', 'Kharkiv']
-        list_storage = ['Storage_1', 'Storage_2', 'Storage_3']
-        list_active_gas_pipelines = [['Lviv', 'Kyiv'], ['Kyiv', 'Odessa'], ['Storage_1', 'Lviv'],
-                                     ['Storage_2', 'Odessa']]
+        list_city = ["Lviv", "Kyiv", "Odessa", "Kharkiv"]
+        list_storage = ["Storage_1", "Storage_2", "Storage_3"]
+        list_active_gas_pipelines = [
+            ["Lviv", "Kyiv"],
+            ["Kyiv", "Odessa"],
+            ["Storage_1", "Lviv"],
+            ["Storage_2", "Odessa"],
+        ]
 
-        unreachable_cities = gas_supply(list_city, list_storage, list_active_gas_pipelines)
+        unreachable_cities = gas_supply(
+            list_city, list_storage, list_active_gas_pipelines
+        )
 
-        self.assertEqual(unreachable_cities, {'Kharkiv'})
+        expected_unreachable_cities = {
+            "Storage_1": ["Kharkiv"],
+            "Storage_2": ["Lviv", "Kyiv", "Kharkiv"],
+            "Storage_3": ["Lviv", "Kyiv", "Odessa", "Kharkiv"],
+        }
+        self.assertEqual(unreachable_cities, expected_unreachable_cities)
 
-        list_city2 = ['Lviv', 'Kyiv', 'Odessa', 'Kharkiv']
-        list_storage2 = ['Storage_1', 'Storage_2', 'Storage_3']
-        list_active_gas_pipelines2 = []
+    def test_gas_supply_no_unreachable_cities(self):
+        list_city = ["Lviv", "Kyiv", "Odessa", "Kharkiv"]
+        list_storage = ["Storage_1", "Storage_2", "Storage_3"]
+        list_active_gas_pipelines = [
+            ["Lviv", "Kyiv"],
+            ["Kyiv", "Odessa"],
+            ["Storage_1", "Lviv"],
+            ["Storage_2", "Odessa"],
+            ["Storage_3", "Kyiv"],
+        ]
 
-        unreachable_cities2 = gas_supply(list_city2, list_storage2, list_active_gas_pipelines2)
+        unreachable_cities = gas_supply(
+            list_city, list_storage, list_active_gas_pipelines
+        )
 
-        self.assertEqual(unreachable_cities2, {'Lviv', 'Kyiv', 'Odessa', 'Kharkiv'})
+        expected_unreachable_cities = {
+            "Storage_1": ["Kharkiv"],
+            "Storage_2": ["Lviv", "Kyiv", "Kharkiv"],
+            "Storage_3": ["Lviv", "Kharkiv"],
+        }
+        self.assertEqual(unreachable_cities, expected_unreachable_cities)
 
-        list_city3 = ['Lviv', 'Kyiv', 'Odessa', 'Kharkiv']
-        list_storage3 = ['Storage_1', 'Storage_2']
-        list_active_gas_pipelines3 = [['Lviv', 'Kyiv'], ['Storage_1', 'Lviv']]
+    def test_gas_supply_no_storages(self):
+        list_city = ["Lviv", "Kyiv", "Odessa", "Kharkiv"]
+        list_storage = []
+        list_active_gas_pipelines = [
+            ["Lviv", "Kyiv"],
+            ["Kyiv", "Odessa"],
+        ]
 
-        unreachable_cities3 = gas_supply(list_city3, list_storage3, list_active_gas_pipelines3)
+        unreachable_cities = gas_supply(
+            list_city, list_storage, list_active_gas_pipelines
+        )
 
-        self.assertEqual(unreachable_cities3, {'Odessa', 'Kharkiv'})
+        expected_unreachable_cities = {}
+        self.assertEqual(unreachable_cities, expected_unreachable_cities)
 
 
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    unittest.main()
