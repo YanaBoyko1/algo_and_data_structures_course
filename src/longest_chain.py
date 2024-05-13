@@ -9,7 +9,7 @@ def longest_chain(words):
     dict = {word: 1 for word in words}
     for current_word in sorted(words[::-1], key=len):
         for index in range(len(current_word)):
-            next_word = current_word[:index] + current_word[index + 1:]
+            next_word = current_word[:index] + current_word[index + 1 :]
             if next_word in dict:
                 dict[current_word] = max(dict[current_word], dict[next_word] + 1)
 

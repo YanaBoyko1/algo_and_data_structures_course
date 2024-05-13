@@ -1,6 +1,7 @@
 from src.min_eating_speed import min_eating_speed
 from unittest import TestCase, main
 
+
 class TestMinEatingSpeed(TestCase):
     def test_min_eating_speed(self):
         piles = [3, 6, 7, 11]
@@ -18,5 +19,5 @@ class TestMinEatingSpeed(TestCase):
         self.assertEqual(min_eating_speed(piles, h), 23)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

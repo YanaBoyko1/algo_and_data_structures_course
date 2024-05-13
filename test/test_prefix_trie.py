@@ -19,5 +19,5 @@ class TestTrie(TestCase):
         self.assertFalse(self.trie.start_with("ban"))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

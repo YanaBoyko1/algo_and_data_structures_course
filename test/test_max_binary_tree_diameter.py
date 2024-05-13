@@ -1,6 +1,7 @@
 from unittest import TestCase, main
 from src.max_binary_tree_diameter import BinaryTree, binary_tree_diameter
 
+
 class TestBinaryTreeDiameter(TestCase):
     def test_binary_tree_diameter(self):
         root = BinaryTree(1)

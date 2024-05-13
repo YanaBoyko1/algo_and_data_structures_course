@@ -49,5 +49,5 @@ class TestRedBlackPriorityQueue(TestCase):
         self.assertEqual(rb_tree.search(3, 20).key, 3)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
