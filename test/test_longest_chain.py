@@ -1,11 +1,13 @@
 from src.longest_chain import longest_chain, process_file
 from unittest import TestCase, main
+import os
 
 
 class TestProcessFile(TestCase):
     def test_process_file(self):
-        self.input_file = "../src/wchain.in"
-        self.output_file = "../src/wchain.out"
+        current_directory = os.path.dirname(os.path.abspath(__file__))
+        self.input_file = os.path.join(current_directory, "..", "src", "wchain.in")
+        self.output_file = os.path.join(current_directory, "..", "src", "wchain.out")
         process_file(self.input_file, self.output_file)
 
         with open(self.output_file, "r") as f:
