@@ -2,6 +2,7 @@ from unittest import TestCase, main
 from src.max_flow import calculate_max_flow, ford_fulkerson
 import os
 
+
 class TestMaxFlow(TestCase):
     def test_calculate_max_flow(self):
         expected_max_flow = 51
