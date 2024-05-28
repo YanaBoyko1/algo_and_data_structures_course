@@ -1,5 +1,5 @@
-red = 'red'
-black = 'black'
+red = "red"
+black = "black"
 
 
 class Node:
@@ -222,10 +222,12 @@ class RedBlackPriorityQueue:
             return None
         return x
 
-    def print_tree(self, root, level=0, prefix=''):
+    def print_tree(self, root, level=0, prefix=""):
         if root != self.nil:
             if root.right != self.nil:
-                self.print_tree(root.right, level + 1, '┌───')
-            print(' ' * (level * 4) + prefix + f"{root.key}({root.priority}){root.color}")
+                self.print_tree(root.right, level + 1, "┌───")
+            print(
+                " " * (level * 4) + prefix + f"{root.key}({root.priority}){root.color}"
+            )
             if root.left != self.nil:
-                self.print_tree(root.left, level + 1, '└───')
+                self.print_tree(root.left, level + 1, "└───")

@@ -18,24 +18,30 @@ def num_islands(grid):
         while q:
             row, col = q.pop()
             directions = [
-                (1, 0), (-1, 0), (0, 1), (0, -1),
-                (1, 1), (-1, 1), (1, -1), (-1, -1)
+                (1, 0),
+                (-1, 0),
+                (0, 1),
+                (0, -1),
+                (1, 1),
+                (-1, 1),
+                (1, -1),
+                (-1, -1),
             ]
             for dr, dc in directions:
                 r = row + dr
                 c = col + dc
                 if (
-                        r in range(h) and
-                        c in range(w) and
-                        grid[r][c] == '1' and
-                        (r, c) not in visit
+                    r in range(h)
+                    and c in range(w)
+                    and grid[r][c] == "1"
+                    and (r, c) not in visit
                 ):
                     visit.add((r, c))
                     q.append((r, c))
 
     for r in range(h):
         for c in range(w):
-            if grid[r][c] == '1' and (r, c) not in visit:
+            if grid[r][c] == "1" and (r, c) not in visit:
                 bfs(r, c)
                 islands += 1
 
