@@ -6,9 +6,6 @@ To run my labs via console you need to hape pytest installed:
 -pip install pytest-
 If already installed use this command instead:
 -pip install --upgrade pytest- to upgrade your pytest to the newest version
-the next step go to the laba9 branch
--git branch-
--git checkout laba9-
 now in CMD navigate to test folder (path) and use command:
 pytest 'name.py' 
 OR run all tests at once
